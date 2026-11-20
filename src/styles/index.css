@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* 
+ * Chavali Wedding Invitation — Light Editorial & Romantic Storybook CSS System
+ * Palette: Warm Ivory (#FAF7F0), Soft Cream (#F3EDE2), Muted Sage (#A7AD91),
+ * Dusty Blush (#D9B9B0), Champagne Gold (#C4A46A), Deep Wine (#603A3D)
+ */
+
+:root {
+  /* Color System */
+  --bg-ivory: #FAF7F0;
+  --bg-cream: #F3EDE2;
+  --bg-cream-light: #FBF9F5;
+  --bg-card: #FFFFFF;
+
+  --color-sage: #A7AD91;
+  --color-sage-light: #D4D9C5;
+  --color-sage-dark: #6C7355;
+
+  --color-blush: #D9B9B0;
+  --color-blush-light: #F4E8E4;
+
+  --color-gold: #C4A46A;
+  --color-gold-light: #DFCA9B;
+  --color-gold-deep: #96763A;
+
+  --color-wine: #603A3D;
+  --color-wine-deep: #472729;
+  --color-wine-light: #7E5155;
+
+  --color-charcoal: #2E2929;
+  --color-muted: #6B625B;
+  --color-border: #E8DFD3;
+
+  /* Typography */
+  --font-display: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-title: 'Cinzel', serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-script: 'Alex Brush', cursive;
+  --font-accent: 'Marcellus', serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Refined Soft Shadows */
+  --shadow-soft: 0 4px 25px rgba(96, 58, 61, 0.05);
+  --shadow-editorial: 0 12px 40px -10px rgba(96, 58, 61, 0.08);
+  --shadow-card: 0 8px 30px rgba(96, 58, 61, 0.06);
+
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Full Viewport Reset & Desktop Fix */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-ivory);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-serif);
+  line-height: 1.7;
+  background-color: var(--bg-ivory);
+  color: var(--color-charcoal);
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-ivory);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(217, 185, 176, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 90% 60%, rgba(167, 173, 145, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 90%, rgba(196, 164, 106, 0.1) 0%, transparent 50%);
+}
+
+/* Editorial Typography Styles */
+.font-editorial-heading {
+  font-family: var(--font-display);
+  color: var(--color-wine);
+  letter-spacing: 0.04em;
+}
+
+.font-editorial-sub {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.font-editorial-tag {
+  font-family: var(--font-title);
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-gold-deep);
+}
+
+/* Subtle Champagne Foil Accent */
+.foil-champagne {
+  background: linear-gradient(135deg, #7C6028 0%, #C4A46A 50%, #96763A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.foil-wine {
+  color: var(--color-wine);
+}
+
+/* Minimal Luxury Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: var(--color-wine);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-wine);
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(96, 58, 61, 0.15);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-wine-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(96, 58, 61, 0.22);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background-color: #FFFFFF;
+  color: var(--color-wine);
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.8rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-cream);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(196, 164, 106, 0.15);
+}
+
+.btn-pill-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--color-gold);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(196, 164, 106, 0.25);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-pill-gold:hover {
+  background-color: var(--color-gold-deep);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 164, 106, 0.35);
+}
+
+/* Light Paper Stationery Card */
+.stationery-editorial {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-editorial);
+  border-radius: 8px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+/* Clean Divider */
+.editorial-line {
+  width: 48px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 1.5rem auto;
+}
+
+/* Subtle botanical floating animation */
+@keyframes floralDrift {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1.5deg); }
+}
+
+.animate-floral {
+  animation: floralDrift 6s ease-in-out infinite;
+}
+
+/* Ensure images stay crisp and responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}

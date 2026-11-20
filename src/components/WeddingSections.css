@@ -1,0 +1,402 @@
+/* ==========================================
+   RSVP — BOTANICAL EDITORIAL DESIGN
+========================================== */
+
+.rsvp-section {
+    position: relative;
+    width: 100%;
+    padding: 110px 5%;
+    overflow: hidden;
+    background: #f7f3e9;
+}
+
+.rsvp-shell {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 730px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    background: #fffdf7;
+    box-shadow: 0 25px 70px rgba(56, 52, 37, 0.09);
+}
+
+/* LEFT PANEL */
+
+.rsvp-intro {
+    position: relative;
+    min-height: 730px;
+    padding: 85px 55px 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: #f8f3e8;
+    background:
+        radial-gradient(ellipse at 15% 15%, rgba(209, 197, 155, 0.13), transparent 35%),
+        radial-gradient(ellipse at 90% 85%, rgba(209, 197, 155, 0.12), transparent 38%),
+        #34483b;
+}
+
+.rsvp-intro::before,
+.rsvp-intro::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(225, 207, 161, 0.23);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.rsvp-intro::before {
+    top: -150px;
+    left: -140px;
+}
+
+.rsvp-intro::after {
+    bottom: -160px;
+    right: -140px;
+}
+
+.rsvp-intro-decoration {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #d7bd83;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+.rsvp-decoration-line {
+    width: 42px;
+    height: 1px;
+    background: #bda875;
+}
+
+.rsvp-eyebrow {
+    display: block;
+    font-family: sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    line-height: 1.8;
+    color: #cbb889;
+}
+
+.rsvp-script {
+    margin: 26px 0 20px;
+    font-family: Georgia, serif;
+    font-size: clamp(55px, 6vw, 83px);
+    line-height: 0.95;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    color: #fff9ec;
+}
+
+.rsvp-script span {
+    display: block;
+    font-style: italic;
+    font-weight: 400;
+    color: #d6bd8b;
+}
+
+.rsvp-intro-rule {
+    width: 65px;
+    height: 1px;
+    margin: 28px 0;
+    background: #c5aa70;
+}
+
+.rsvp-intro-caption {
+    max-width: 300px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.9;
+    font-style: italic;
+    color: #e3ddcf;
+}
+
+.rsvp-couple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 42px;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    letter-spacing: 0.22em;
+    color: #fff9ec;
+}
+
+.rsvp-ampersand {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #d6bd8b;
+    letter-spacing: 0;
+}
+
+.rsvp-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(214, 189, 139, 0.35);
+    font-family: sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color: #e6d5ad;
+}
+
+.rsvp-bottom-message {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #d6bd8b;
+}
+
+.rsvp-bottom-message p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #e1d8c7;
+}
+
+/* RIGHT FORM PANEL */
+
+.rsvp-form-side {
+    padding: 72px clamp(30px, 5vw, 75px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fffdf7;
+}
+
+.rsvp-form-heading {
+    margin-bottom: 37px;
+}
+
+.rsvp-form-heading h3 {
+    margin: 12px 0 9px;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 3.5vw, 43px);
+    line-height: 1.15;
+    font-weight: 400;
+    color: #603a3d;
+}
+
+.rsvp-form-heading p {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    font-style: italic;
+    color: #766b5e;
+}
+
+/* FORM FIELDS */
+
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.rsvp-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.rsvp-field {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.rsvp-field label {
+    margin-bottom: 9px;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: #594b40;
+}
+
+.rsvp-field input,
+.rsvp-field select,
+.rsvp-field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #e1d8c9;
+    border-radius: 3px;
+    outline: none;
+    background: #fffefa;
+    color: #493b35;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.rsvp-field input,
+.rsvp-field select {
+    min-height: 47px;
+}
+
+.rsvp-field textarea {
+    min-height: 85px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.rsvp-field input::placeholder,
+.rsvp-field textarea::placeholder {
+    color: #a49a8b;
+    font-style: italic;
+}
+
+.rsvp-field input:focus,
+.rsvp-field select:focus,
+.rsvp-field textarea:focus {
+    border-color: #9c8053;
+    box-shadow: 0 0 0 3px rgba(196, 164, 106, 0.13);
+}
+
+/* ATTENDANCE OPTIONS */
+
+.rsvp-attendance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.rsvp-attendance button {
+    min-height: 52px;
+    padding: 12px 10px;
+    border: 1px solid #dfd6c7;
+    border-radius: 3px;
+    background: #fffefa;
+    color: #62574d;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.rsvp-attendance button:hover {
+    border-color: #74836b;
+}
+
+.rsvp-attendance button.selected {
+    border-color: #405746;
+    background: #405746;
+    color: #fffdf5;
+}
+
+/* SUBMIT BUTTON */
+
+.rsvp-submit {
+    width: 100%;
+    min-height: 56px;
+    margin-top: 5px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: none;
+    border-radius: 3px;
+    background: #603a3d;
+    color: #fffaf0;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.rsvp-submit:hover {
+    background: #754d50;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(96, 58, 61, 0.16);
+}
+
+.rsvp-form-footnote {
+    margin: -9px 0 0;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+    color: #8a7c6c;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .rsvp-section {
+        padding: 70px 5%;
+    }
+
+    .rsvp-shell {
+        max-width: 600px;
+        grid-template-columns: 1fr;
+    }
+
+    .rsvp-intro {
+        min-height: 520px;
+        padding: 65px 30px 75px;
+    }
+
+    .rsvp-form-side {
+        padding: 55px 35px 60px;
+    }
+}
+
+@media (max-width: 520px) {
+    .rsvp-section {
+        padding: 48px 16px;
+    }
+
+    .rsvp-intro {
+        min-height: 470px;
+        padding: 55px 22px 75px;
+    }
+
+    .rsvp-script {
+        font-size: 66px;
+    }
+
+    .rsvp-form-side {
+        padding: 43px 22px 48px;
+    }
+
+    .rsvp-form-heading h3 {
+        font-size: 34px;
+    }
+
+    .rsvp-field-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .rsvp-form {
+        gap: 21px;
+    }
+
+    .rsvp-attendance {
+        gap: 8px;
+    }
+
+    .rsvp-attendance button {
+        font-size: 12px;
+    }
+}
